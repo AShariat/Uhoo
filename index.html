@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uhoo!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bulma.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div id="day"></div>
+    <a href="/" class=""><h1>Uhoo!</h1></a>
+    <div id="time"></div>
+  </header>
+  <main id="main" class="tile is-ancestor">
+    <div id="left-side" class="tile is-parent is-2 is-vertical box">
+      <div id="movies-search" class="tile is-parent is-vertical is-12">
+        <h2 class="tile is-child is-12 has-text-centered has-text-link">Movie Search</h2>
+        <input type="search" name="Search Movies" id="movies-input" class="tile is-child is-12" placeholder="Find Movie You Like!">
+        <button id="movies-button" class="tile is-child is-12">Search</button>
+      </div>
+      <div id="movies-list" class="tile is-parent is-vertical is-12"></div>
+    </div>
+    <div id="center" class="tile is-parent is-vertical is-8">
+      <div id="weather" class="tile is-parent is-12 box"></div>
+      <div id="search" class="tile is-parent is-12 box">
+        <input type="search" name="Search News" id="news-input" class="tile is-child is-9" placeholder="Type News Topic You Like!">
+        <button id="news-button" class="tile is-child is-3">Search</button>
+      </div>
+      <div id="news" class="tile is-parent is-12 box"></div>
+    </div>
+    <div id="right-side" class="tile is-parent is-2 is-vertical box">
+      <h2 class="tile is-child is-12 has-text-centered has-text-link">COVID-19</h2>
+      <div id="world" class="tile is-parent is-12 is-vertical"></div>
+      <div id="search-countries" class="tile is-parent is-12 is-vertical">
+        <input type="search" name="Search Countries" id="country-input" class="tile is-child is-12" placeholder="Search Country Name!">
+        <button id="country-button" class="tile is-child is-12">Search</button>
+        <div id="countries-list" class="tile is-parent is-vertical is-12"></div>
+      </div>
+      <div id="search-states" class="tile is-parent is-12 is-vertical">
+        <input type="search" name="Search States" id="state-input" class="tile is-child is-12" placeholder="Search State Name!">
+        <button id="state-button" class="tile is-child is-12">Search</button>
+        <div id="states-list" class="tile is-parent is-vertical is-12"></div>
+      </div>
+    </div>
+  </main>
+  <footer id="footer">
+    <h6>Made by Amir, Casey, Chandler, and Kris</h6>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
