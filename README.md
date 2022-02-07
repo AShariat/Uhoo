@@ -27,4 +27,4 @@ The following image demonstrates the web application's default appearance and fu
 
 ## 📝 Live URL
 
-* [UHOO!](https://kcaseychamberlain.github.io/uhoo/)
+* [UHOO!](https://ashariat.github.io/Uhoo/)
