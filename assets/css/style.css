@@ -112,6 +112,17 @@ h6 {
 .box {
   background-color: var(--secondary);
 }
+#movies {
+  display: flex;
+  align-items: center;
+}
+.movies-poster {
+  display: block;
+  height: 300px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+}
 #weather {
   display: flex;
   flex-wrap: wrap;
@@ -148,13 +159,75 @@ h6 {
 }
 .news-image {
   display: block;
-  align-items: center;
   height: 250px;
-  width: 250px;
+  width: auto;
   background-size: cover;
   background-position: center;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1300px) {
+  .movies-poster {
+    display: block;
+    height: 250px;
+    width: 175px;
+    background-size: cover;
+    background-position: center;
+  }
+  #news-input, #movies-input, #country-input, #state-input {
+    font-size: 0.80rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .movies-poster {
+    display: block;
+    height: 225px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+  }
+  .news-image {
+    display: block;
+    height: 200px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+  }  
+}
+@media screen and (max-width: 1000px) {
+  .movies-poster {
+    display: block;
+    height: 200px;
+    width: 125px;
+    background-size: cover;
+    background-position: center;
+  }
+  .news-image {
+    display: block;
+    height: 150px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+  }
+  #news-input, #movies-input, #country-input, #state-input {
+    font-size: 0.70rem;
+  }
+  h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-family: 'Bangers', cursive;
+    font-size: 1rem;
+  }
+  h5 {
+    font-family: 'Bangers', cursive;
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 892px) {
   #day, #time {
     width: 200px;
     font-size: 1.25rem;
@@ -162,11 +235,61 @@ h6 {
   h1 {
     font-size: 2rem;
   }
+  .movies-poster {
+    display: block;
+    height: 175px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+  }
+  .news-image {
+    display: block;
+    height: 100px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+  }
+  #news-input, #movies-input, #country-input, #state-input {
+    font-size: 0.60rem;
+  }
 }
 @media screen and (max-width: 768px) {
   #news-input, #news-button, #movies-input, #movies-button, #country-input, #country-button, #state-input, #state-button {
     width: 100%;
   }
+  .movies-poster {
+    display: block;
+    height: 300px;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  .news-image {
+    display: block;
+    height: 300px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+  }
+  #news-input, #movies-input, #country-input, #state-input {
+    font-size: 1rem;
+  }
+  h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+  }
+  h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-family: 'Bangers', cursive;
+    font-size: 1rem;
+  }  
 }
 @media screen and (max-width: 600px) {
   #day, #time {
@@ -174,7 +297,7 @@ h6 {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   #day, #time {
     width: 75px;
     font-size: 0.75rem;

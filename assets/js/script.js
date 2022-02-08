@@ -59,12 +59,14 @@ function getMovies() {
       if (data.results[i].titleType === "movie") {
         var movies = document.createElement('div');
         movieEl.appendChild(movies);
+        movies.id = 'movies';
         movies.className = 'tile is-parent is-12 is-vertical';
 
-        var moviesPoster = document.createElement('img');
+        var moviesPoster = document.createElement('div');
         movies.appendChild(moviesPoster);
-        moviesPoster.className = 'tile is-child is-12';
-        moviesPoster.setAttribute("src", data.results[i].image.url);
+        moviesPoster.className = 'movies-poster';
+        // moviesPoster.setAttribute("src", data.results[i].image.url);
+        moviesPoster.style.backgroundImage = `url('${data.results[i].image.url}')`;
 
         var moviesName = document.createElement('h4');
         movies.appendChild(moviesName);
@@ -262,34 +264,26 @@ function getNews() {
         news.appendChild(newsItem);
         newsItem.className = 'tile is-parent is-vertical is-4';
 
-        var newsImageLink = document.createElement('a');
-        newsItem.appendChild(newsImageLink);
-        newsImageLink.className = 'news-image';
-        newsImageLink.setAttribute('href', data.articles[i].link);
-        newsImageLink.setAttribute('target', '_blank');
-        newsImageLink.style.backgroundImage = `url('${data.articles[i].media}')`;
+        var newsImage = document.createElement('a');
+        newsItem.appendChild(newsImage);
+        newsImage.className = 'news-image';
+        newsImage.setAttribute('href', data.articles[i].link);
+        newsImage.setAttribute('target', '_blank');
+        newsImage.style.backgroundImage = `url('${data.articles[i].media}')`;
 
-        var newsSourceLink = document.createElement('a');
-        newsItem.appendChild(newsSourceLink);
-        newsSourceLink.className = 'tile is-parent is-12';
-        newsSourceLink.setAttribute('href', "https://www." + data.articles[i].clean_url);
-        newsSourceLink.setAttribute('target', '_blank');
-
-        var newsSource = document.createElement('p');
-        newsSourceLink.appendChild(newsSource);
+        var newsSource = document.createElement('a');
+        newsItem.appendChild(newsSource);
         newsSource.className = 'tile is-child is-12 has-text-centered has-text-danger-dark is-italic';
+        newsSource.setAttribute('href', "https://www." + data.articles[i].clean_url);
+        newsSource.setAttribute('target', '_blank');
         newsSource.textContent = "Source: " + data.articles[i].clean_url;
 
         var newsTextLink = document.createElement('a');
         newsItem.appendChild(newsTextLink);
-        newsTextLink.className = 'tile is-parent is-12';
+        newsTextLink.className = 'tile is-child is-12 has-text-justified has-text-black';
         newsTextLink.setAttribute('href', data.articles[i].link);
         newsTextLink.setAttribute('target', '_blank');
-        
-        var newsText = document.createElement('p');
-        newsTextLink.appendChild(newsText);
-        newsText.className = 'tile is-child is-12 has-text-justified has-text-black';
-        newsText.textContent = data.articles[i].title;
+        newsTextLink.textContent = data.articles[i].title;
       }
     };
   })
