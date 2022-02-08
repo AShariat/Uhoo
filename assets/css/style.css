@@ -146,6 +146,14 @@ h6 {
 #news {
   flex-wrap: wrap;
 }
+.news-image {
+  display: block;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  background-position: center;
+}
 @media screen and (max-width: 860px) {
   #day, #time {
     width: 200px;
