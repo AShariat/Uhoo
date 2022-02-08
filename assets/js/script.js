@@ -264,14 +264,10 @@ function getNews() {
 
         var newsImageLink = document.createElement('a');
         newsItem.appendChild(newsImageLink);
-        newsImageLink.className = 'tile is-parent is-12';
+        newsImageLink.className = 'news-image';
         newsImageLink.setAttribute('href', data.articles[i].link);
         newsImageLink.setAttribute('target', '_blank');
-
-        var newsImage = document.createElement('img');
-        newsImageLink.appendChild(newsImage);
-        newsImage.className = 'tile is-child is-12';
-        newsImage.setAttribute('src', data.articles[i].media);
+        newsImageLink.style.backgroundImage = `url('${data.articles[i].media}')`;
 
         var newsSourceLink = document.createElement('a');
         newsItem.appendChild(newsSourceLink);
